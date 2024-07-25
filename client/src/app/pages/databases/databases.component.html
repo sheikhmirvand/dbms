@@ -1,0 +1,9 @@
+<div class="container m-auto flex gap-10 flex-wrap justify-center items-center">
+  <div *ngFor="let data of databases">
+    <app-card
+      [name]="data.Database"
+      [baseUrl]="'database'"
+      [type]="'databases'"
+    ></app-card>
+  </div>
+</div>

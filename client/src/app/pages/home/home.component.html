@@ -1,0 +1,24 @@
+<div class="h-screen w-full flex justify-center items-center">
+  <form
+    [formGroup]="form"
+    (submit)="onSubmit()"
+    class="flex flex-col items-center justify-center gap-10 bg-red-300 w-[400px] h-[400px]"
+  >
+    <app-input
+      [control]="user"
+      type="text"
+      [plaseHolder]="'enter your user'"
+    ></app-input>
+    <app-input
+      [control]="password"
+      [type]="'password'"
+      [plaseHolder]="'enter your password'"
+    ></app-input>
+    <app-input
+      [control]="port"
+      [plaseHolder]="'enter your mysql port'"
+      [type]="'number'"
+    ></app-input>
+    <input type="submit" value="submit" class="btn" />
+  </form>
+</div>

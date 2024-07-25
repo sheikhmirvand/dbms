@@ -1,0 +1,27 @@
+<div class="flex gap-9 overflow-scroll">
+  <div *ngFor="let table of tables">
+    <app-card
+      [baseUrl]="path"
+      name="{{ table[fieldName] }}"
+      type="table"
+    ></app-card>
+    <div class="h-[10px]"></div>
+  </div>
+</div>
+
+<button class="btn" (click)="onSubmit()">run</button>
+
+<div class="h-screen flex justify-center">
+  <div class="NgxEditor__Wrapper w-1/2">
+    <ngx-editor-menu [editor]="editor"> </ngx-editor-menu>
+    <ngx-editor
+      [editor]="editor"
+      [disabled]="false"
+      [ngModel]="html"
+      [placeholder]="'Type here...'"
+      [lang]="'python'"
+      (ngModelChange)="editorChange($event)"
+    ></ngx-editor>
+  </div>
+  <div class="w-1/2"></div>
+</div>
